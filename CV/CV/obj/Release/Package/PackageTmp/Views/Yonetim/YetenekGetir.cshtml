@@ -1,0 +1,31 @@
+﻿@model CV.Models.Entity.Yetenek
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<h2 style="color: mediumpurple;">Yetenek Güncelle</h2>
+@using (Html.BeginForm("YetenekGuncelle", "Yonetim", FormMethod.Post))
+{
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Yetenek1)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Yetenek1, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-primary">Yetenek Güncelle</button>
+    </div>
+}
+
+
+
+

@@ -1,0 +1,63 @@
+﻿@model CV.Models.Entity.Egitim
+@{
+    ViewBag.Title = "YeniEgitim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<form method="post">
+    <h2 style="color:orange;">Yeni Eğitim</h2>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Başlık
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Baslik, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>
+            Alt Başlık 1
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.AltBaslik1, new { @class = "form-control" })
+    </div>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Alt Başlık 2 
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.AltBaslik2, new { @class = "form-control" })
+    </div>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Genel Not Ortalaması
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Gno, new { @class = "form-control" })
+    </div>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Tarih
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Tarih, new { @class = "form-control" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Deneyim Ekle</button>
+</form>
+
+
+
+
+

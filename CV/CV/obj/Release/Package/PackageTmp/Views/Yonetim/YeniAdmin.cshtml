@@ -1,0 +1,36 @@
+﻿@model CV.Models.Entity.CVAdmin
+@{
+    ViewBag.Title = "YeniAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<form method="post">
+    <h2 style="color:red;">Yeni Admin</h2>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Kullanıcı
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Kullanici, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>
+            Şifre
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Sifre, new { @class = "form-control" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Admin Ekle</button>
+</form>
+
+
+
+
+

@@ -1,0 +1,41 @@
+﻿@using CV.Models.Entity
+@model List<Hobi>
+@{
+    ViewBag.Title = "AnaHobi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:aqua;">Hobi Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>HOBİ</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+<tr>
+    <td>
+        @ccc.ID
+    </td>
+    <td>
+        @ccc.Aciklama1
+    </td>
+    <td>
+        @Html.ActionLink("Sil", "HobiSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+    </td>
+    <td>
+        <a href="~/Yonetim/HobiGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+    </td>
+</tr>
+    }
+</table>
+<a href="/Yonetim/YeniHobi" class="btn btn-info">Yeni Hobi Ekle</a>
+<hr />
+
+

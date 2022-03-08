@@ -1,0 +1,54 @@
+﻿@model CV.Models.Entity.Deneyim
+@{
+    ViewBag.Title = "YeniDeneyim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<form method="post">
+    <h2 style="color:green;">Yeni Deneyim</h2>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Başlık
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Baslik, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>
+            Alt Başlık
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.AltBaslik, new { @class = "form-control" })
+    </div>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Açıklama
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Aciklama, new { @class = "form-control" })
+    </div>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Tarih
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Tarih, new { @class = "form-control" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Deneyim Ekle</button>
+</form>
+
+
+
+
+

@@ -1,0 +1,39 @@
+﻿@model CV.Models.Entity.CVAdmin
+
+@{
+    ViewBag.Title = "AdminGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<h2 style="color: red;">Admin Güncelle</h2>
+@using (Html.BeginForm("AdminGuncelle", "Yonetim", FormMethod.Post))
+{
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Kullanici)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Kullanici, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Sifre)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Sifre, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-primary">Admin Güncelle</button>
+    </div>
+}
+
+
+
+
+
+

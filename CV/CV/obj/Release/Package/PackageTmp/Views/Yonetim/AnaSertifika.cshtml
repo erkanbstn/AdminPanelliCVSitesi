@@ -1,0 +1,41 @@
+﻿@using CV.Models.Entity
+@model List<Sertifika>
+@{
+    ViewBag.Title = "AnaSertifika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:burlywood;">Sertifika Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>AÇIKLAMA</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+<tr>
+    <td>
+        @ccc.ID
+    </td>
+    <td>
+        @ccc.Aciklama
+    </td>
+    <td>
+        @Html.ActionLink("Sil", "SertifikaSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+    </td>
+    <td>
+        <a href="~/Yonetim/SertifikaGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+    </td>
+</tr>
+    }
+</table>
+<a href="/Yonetim/YeniSertifika" class="btn btn-info">Yeni Sertifika Ekle</a>
+<hr />
+
+

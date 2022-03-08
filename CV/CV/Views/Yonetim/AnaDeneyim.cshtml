@@ -1,0 +1,51 @@
+﻿@using CV.Models.Entity
+@model List<Deneyim>
+@{
+    ViewBag.Title = "AnaDeneyim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:green;">Deneyim Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>ALT BAŞLIK</th>
+        <th>AÇIKLAMA</th>
+        <th>TARİH</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+        <tr>
+            <td>
+                @ccc.ID
+            </td>
+            <td>
+                @ccc.Baslik
+            </td>
+            <td>
+                @ccc.AltBaslik
+            </td>
+            <td>
+                @ccc.Aciklama
+            </td>
+            <td>
+                @ccc.Tarih
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "DeneyimSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+            </td>
+            <td>
+                <a href="~/Yonetim/DeneyimGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Yonetim/YeniDeneyim" class="btn btn-info">Yeni Deneyim Ekle</a>
+<hr />

@@ -1,0 +1,31 @@
+﻿@model CV.Models.Entity.Sertifika
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color: burlywood;">Sertifika Güncelle</h2>
+@using (Html.BeginForm("SertifikaGuncelle", "Yonetim", FormMethod.Post))
+{
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Aciklama)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Aciklama, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-primary">Sertifika Güncelle</button>
+    </div>
+}
+
+
+

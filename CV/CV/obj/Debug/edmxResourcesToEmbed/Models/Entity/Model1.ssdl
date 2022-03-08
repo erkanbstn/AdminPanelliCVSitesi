@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="u0241506_EczCVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CVAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kullanici" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Deneyim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="AltBaslik" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="Tarih" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Egitim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="AltBaslik1" Type="varchar" MaxLength="50" />
+    <Property Name="AltBaslik2" Type="varchar" MaxLength="100" />
+    <Property Name="Gno" Type="varchar" MaxLength="20" />
+    <Property Name="Tarih" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Hobi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aciklama1" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Kimlik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Soyad" Type="varchar" MaxLength="50" />
+    <Property Name="Adres" Type="varchar" MaxLength="100" />
+    <Property Name="Telefon" Type="varchar" MaxLength="50" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="Resim" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Proje">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sertifika">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" />
+    <Property Name="Kod" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Yetenek">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yetenek1" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="u0241506_EczCVModelStoreContainer">
+    <EntitySet Name="CVAdmin" EntityType="Self.CVAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deneyim" EntityType="Self.Deneyim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Egitim" EntityType="Self.Egitim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobi" EntityType="Self.Hobi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kimlik" EntityType="Self.Kimlik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proje" EntityType="Self.Proje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sertifika" EntityType="Self.Sertifika" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yetenek" EntityType="Self.Yetenek" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

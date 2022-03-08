@@ -1,0 +1,54 @@
+﻿@model CV.Models.Entity.Egitim
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<h2 style="color:orange;">Eğitim Güncelle</h2>
+@using (Html.BeginForm("EgitimGuncelle", "Yonetim", FormMethod.Post))
+{
+
+    <br />
+
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Baslik)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Baslik, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.AltBaslik1)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.AltBaslik1, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.AltBaslik2)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.AltBaslik2, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Gno)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Gno, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Tarih)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Tarih, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-primary">Eğitim Güncelle</button>
+    </div>
+}
+
+
+
+

@@ -1,0 +1,58 @@
+﻿@model CV.Models.Entity.Kimlik
+@{
+    ViewBag.Title = "KimlikGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+
+<h2 style="color:blue;">Kimlik Güncelle</h2>
+@using (Html.BeginForm("KimlikGuncelle", "Yonetim", FormMethod.Post))
+{
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Ad)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Ad, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Soyad)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Soyad, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Adres)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Adres, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Telefon)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Telefon, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(k => k.Mail)
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Mail, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-primary">Kimlik Güncelle</button>
+    </div>
+    <br />
+}
+@using (Html.BeginForm("DosyaYukle", "Yonetim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x=>x.ID)
+    <input class="form-control" type="file" name="dosya" />
+    <br />
+    <input class="btn btn-danger" type="submit" value="Dosya Yükle" />
+}
+

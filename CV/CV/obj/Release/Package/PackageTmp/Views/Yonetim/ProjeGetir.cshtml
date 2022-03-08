@@ -1,0 +1,19 @@
+﻿@model CV.Models.Entity.Proje
+@{
+    ViewBag.Title = "ProjeGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+
+<h2 style="color: cornflowerblue;">Proje Güncelle</h2>
+<br />
+
+@using (Html.BeginForm("ProjeGuncelle", "Yonetim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.ID)
+    <input class="form-control" type="file" name="dosya" />
+    <br />
+    <input class="btn btn-danger" type="submit" value="Dosya Yükle" />
+}

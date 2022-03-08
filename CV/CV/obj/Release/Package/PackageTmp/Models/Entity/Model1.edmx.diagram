@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0735d8c2e699488c829950aefe762480" Name="Diagram1">
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Deneyim" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Egitim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Sertifika" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Yetenek" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.CVAdmin" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Hobi" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Proje" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="u0241506_EczCVModel.Kimlik" Width="1.5" PointX="3.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

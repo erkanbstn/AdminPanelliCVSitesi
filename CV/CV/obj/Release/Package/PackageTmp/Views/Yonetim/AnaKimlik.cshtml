@@ -1,0 +1,79 @@
+﻿@using CV.Models.Entity
+@model List<Kimlik>
+@{
+    ViewBag.Title = "AnaKimlik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:blue;">Kimlik Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>ADRES</th>
+        <th>TELEFON</th>
+        <th>MAİL</th>
+        <th>RESİM YOLU</th>
+        <th>RESİM</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+        <tr>
+            <td>
+                @ccc.ID
+            </td>
+            <td>
+                @ccc.Ad
+            </td>
+            <td>
+                @ccc.Soyad
+            </td>
+            <td>
+                @ccc.Adres
+            </td>
+            <td>
+                @ccc.Telefon
+            </td>
+            <td>
+                @ccc.Mail
+            </td>
+            <td>
+                @ccc.Resim
+            </td>
+            <td>
+                <img src="~/CV/assets/img/@ccc.Resim" height="70" width="90" alt="@ccc.Resim">
+            </td>
+            <td>
+                <a href="~/Yonetim/KimlikGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<p style="color:blue; font-size:30px;">--------------------------------------------------------------------------------------------------------------------</p>
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>AÇIKLAMA</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc2 in Model)
+    {
+        <tr>
+            <td>
+                @ccc2.Aciklama
+            </td>
+            <td>
+                <a href="~/Yonetim/KimlikGetir2/@ccc2.ID" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+
+

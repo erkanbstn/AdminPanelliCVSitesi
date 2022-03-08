@@ -1,0 +1,57 @@
+﻿@using CV.Models.Entity
+@model List<Egitim>
+@{
+    ViewBag.Title = "AnaEgitim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:orange;">Eğitim Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>ALT BAŞLIK1</th>
+        <th>ALT BAŞLIK2</th>
+        <th>GNO</th>
+        <th>TARİH</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+<tr>
+    <td>
+        @ccc.ID
+    </td>
+    <td>
+        @ccc.Baslik
+    </td>
+    <td>
+        @ccc.AltBaslik1
+    </td>
+    <td>
+        @ccc.AltBaslik2
+    </td>
+    <td>
+        @ccc.Gno
+    </td>
+    <td>
+        @ccc.Tarih
+    </td>
+    <td>
+        @Html.ActionLink("Sil", "EgitimSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+    </td>
+    <td>
+        <a href="~/Yonetim/EgitimGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+    </td>
+</tr>
+    }
+</table>
+<a href="/Yonetim/YeniEgitim" class="btn btn-info">Yeni Eğitim Ekle</a>
+<hr />
+
+

@@ -1,0 +1,43 @@
+﻿@using CV.Models.Entity
+@model List<CVAdmin>
+@{
+    ViewBag.Title = "AnaDeneyim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:red;">Admin Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI</th>
+        <th>ŞİFRE</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+        <tr>
+            <td>
+                @ccc.ID
+            </td>
+            <td>
+                @ccc.Kullanici
+            </td>
+            <td>
+                @ccc.Sifre
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "AdminSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+            </td>
+            <td>
+                <a href="~/Yonetim/AdminGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Yonetim/YeniAdmin" class="btn btn-info">Yeni Admin Ekle</a>
+<hr />

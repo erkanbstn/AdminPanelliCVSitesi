@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CV Yönetim Paneli</title>
+    <link rel="icon" type="image/x-icon" href="~/CV/assets/img/favicon.png" />
+    <link href="~/SideBar/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">CV Panel</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaKimlik">Kimlik</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaDeneyim">Deneyim</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaEgitim">Eğitim</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaYetenek">Yetenek</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaHobi">Hobi</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaSertifika">Sertifika</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaProje">Proje</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Yonetim/AnaAdmin">Admin</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/SiderBar/js/scripts.js"></script>
+</body>
+</html>

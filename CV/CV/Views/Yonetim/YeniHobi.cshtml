@@ -1,0 +1,26 @@
+﻿@model CV.Models.Entity.Hobi
+@{
+    ViewBag.Title = "YeniHobi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+
+<form method="post">
+    <h2 style="color:aqua;">Yeni Hobi</h2>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Hobi
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Aciklama1, new { @class = "form-control" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Hobi Ekle</button>
+</form>
+
+

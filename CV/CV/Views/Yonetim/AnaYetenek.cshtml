@@ -1,0 +1,41 @@
+﻿@using CV.Models.Entity
+@model List<Yetenek>
+@{
+    ViewBag.Title = "AnaYetenek";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="color:mediumpurple;">Yetenek Bölümü</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>YETENEK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var ccc in Model)
+    {
+<tr>
+    <td>
+        @ccc.ID
+    </td>
+    <td>
+        @ccc.Yetenek1
+    </td>
+    <td>
+        @Html.ActionLink("Sil", "YetenekSil", new { ID = ccc.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })
+    </td>
+    <td>
+        <a href="~/Yonetim/YetenekGetir/@ccc.ID" class="btn btn-primary">Güncelle</a>
+    </td>
+</tr>
+    }
+</table>
+<a href="/Yonetim/YeniYetenek" class="btn btn-info">Yeni Yetenek Ekle</a>
+<hr />
+
+

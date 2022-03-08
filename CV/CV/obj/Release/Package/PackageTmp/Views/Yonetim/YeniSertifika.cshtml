@@ -1,0 +1,28 @@
+﻿@model CV.Models.Entity.Sertifika
+@{
+    ViewBag.Title = "YeniSertifika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<br />
+
+<form method="post">
+    <h2 style="color:orange;">Yeni Sertifika</h2>
+    <br />
+    <div style="margin-top:15px">
+        <label>
+            Yetenek
+        </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(y => y.Aciklama, new { @class = "form-control" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Sertifika Ekle</button>
+</form>
+
+
+

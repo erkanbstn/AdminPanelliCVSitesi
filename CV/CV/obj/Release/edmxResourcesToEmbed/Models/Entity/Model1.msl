@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="u0241506_EczCVModelStoreContainer" CdmEntityContainer="u0241506_EczCVEntities">
+    <EntitySetMapping Name="Deneyim">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Deneyim">
+        <MappingFragment StoreEntitySet="Deneyim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Egitim">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Egitim">
+        <MappingFragment StoreEntitySet="Egitim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik1" ColumnName="AltBaslik1" />
+          <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
+          <ScalarProperty Name="Gno" ColumnName="Gno" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sertifika">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Sertifika">
+        <MappingFragment StoreEntitySet="Sertifika">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yetenek">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Yetenek">
+        <MappingFragment StoreEntitySet="Yetenek">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Yetenek1" ColumnName="Yetenek1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CVAdmin">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.CVAdmin">
+        <MappingFragment StoreEntitySet="CVAdmin">
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobi">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Hobi">
+        <MappingFragment StoreEntitySet="Hobi">
+          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proje">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Proje">
+        <MappingFragment StoreEntitySet="Proje">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kimlik">
+      <EntityTypeMapping TypeName="u0241506_EczCVModel.Kimlik">
+        <MappingFragment StoreEntitySet="Kimlik">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
